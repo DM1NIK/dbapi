@@ -10,7 +10,7 @@ class dbKontakte extends db
         $conditions = array();
         $binds = array();
         foreach ($kontakt as $attribute => $value) {
-            if (!empty($value) && $attribute != "pid") {
+            if (!empty($value) && $attribute != "kid") {
                 if (is_string($value)) {
                     $conditions[] = $attribute . " LIKE :". $attribute;
                     $binds[$attribute] =  "%".$value."%";
